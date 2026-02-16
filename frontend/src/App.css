@@ -1,0 +1,168 @@
+/* 🌸 Love Theme Palette
+Primary: pink-500
+Secondary: rose-400
+Accent: fuchsia-500
+Background: pink-50
+Text dark: rose-900
+Text light: rose-600
+*/
+
+.sparkle-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/* ✨ Main Text */
+.sparkle-text {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.4;
+  padding: 0 1rem;
+  display: inline-block;
+
+  background: linear-gradient(
+    120deg,
+    #ff6f91,
+    #ffb3c6,
+    #c77dff,
+    #ff6f91
+  );
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shimmer 4s ease-in-out infinite;
+
+  /* Soft glow */
+  text-shadow:
+    0 0 8px rgba(255, 111, 145, 0.6),
+    0 0 16px rgba(199, 125, 255, 0.4);
+}
+
+/* ✨ Gradient movement */
+@keyframes shimmer {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+/* ✨ Sparkles */
+.sparkle-wrapper::before,
+.sparkle-wrapper::after {
+  content: "✦";
+  position: absolute;
+  font-size: 1.8rem;
+  color: #fff;
+  opacity: 0;
+  animation: sparkle 2.5s infinite ease-in-out;
+}
+
+.sparkle-wrapper::before {
+  top: -25px;
+  left: 20%;
+}
+
+.sparkle-wrapper::after {
+  bottom: -25px;
+  right: 20%;
+  animation-delay: 1.2s;
+}
+
+/* ✨ Sparkle animation */
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6) rotate(0deg);
+  }
+}
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.heart-svg {
+  width: 300px;
+  overflow: visible;
+}
+
+/* Heart */
+.heart-body {
+  fill: #ff6f91;
+  filter: drop-shadow(0 10px 25px rgba(255, 111, 145, 0.4));
+}
+
+/* Wings */
+.wing {
+  fill: #ffd6e0;
+  transform-origin: center;
+  animation: flap 2s ease-in-out infinite;
+}
+
+.left-wing {
+  transform-origin: right center;
+}
+
+.right-wing {
+  transform-origin: left center;
+}
+
+/* Eyes */
+.eye {
+  fill: #4a1c2a;
+}
+
+/* Lips */
+.lips {
+  stroke: #b30059;
+  stroke-width: 3;
+  fill: none;
+}
+
+@keyframes flap {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.eye {
+  animation: blink 4s infinite;
+  transform-origin: center;
+}
+
+@keyframes blink {
+  0%, 95%, 100% {
+    transform: scaleY(1);
+  }
+  96%, 98% {
+    transform: scaleY(0.1);
+  }
+}
+
+.lips {
+  animation: kiss 3s infinite;
+}
+
+@keyframes kiss {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
