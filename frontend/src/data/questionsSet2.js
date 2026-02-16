@@ -11,24 +11,24 @@
     },
     {
         id:3,
-        question: "Your Favourite.?",
-        options: ["daal chawal bhujiya" , "kheer , puri, sbji"]
-    },
-    {
-        id:4,
         question: "A night out ",
         options: ["With our Whole family" , "Only me and You?"]
     },
     {
-        id:5,
+        id:4,
         question: "Your Favourite Cricketer?",
         options: ["Dhoni" , "Kohli","Rohit Sharma", "KL Rahul"]
     },
    
      {
-        id:6,
+        id:5,
         question: "Your Favourite Music Type",
         options: ["Old Romantic" , "Bhojpuri Romantic","South Indian music", "Ghazals"]
+    },
+    {
+        id:6,
+        question: "What I love moset",
+        options: ["You with beard " , "you without beard"]
     },
 ]
 

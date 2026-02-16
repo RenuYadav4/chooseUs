@@ -22,9 +22,9 @@ const Toaster = ({ message }) => {
       fixed top-6 left-1/2 -translate-x-1/2
       z-100
       bg-white text-rose-700
-      px-6 py-3 rounded-full
+      px-10 py-6 rounded-full text-xl
       shadow-xl border border-rose-300
-      animate-fade-in
+      animate-fade-in shadow-red-500
     ">
       {message}
     </div>
